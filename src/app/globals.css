@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Text/Family/Text (Figma) = Raleway, única familia del sistema */
+  --font-display: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  /* Teko: fuente condensada para títulos de sección (H2) */
+  --font-teko: "Teko", ui-sans-serif, system-ui, sans-serif;
+
+  /* Ronda 44 — Takis Global Brandbook 2025 (03.4 Typography, pág. 37-38).
+     El manual pide tres fuentes: "TAKIS® Font" (custom brushstroke, solo
+     para nombres de sabor — sigue sin archivo entregado, es un asset
+     custom del brandbook, no una fuente instalable), "Veneer" (headlines
+     de comunicación) y "Acumin Pro" (cuerpo de texto, packaging +
+     comunicación). Ronda 45 usó sustitutos gratuitos (Google Fonts, OFL)
+     para las tres mientras no había licencia.
+     Ronda 47: el cliente dio acceso a su cuenta de Adobe Fonts/Creative
+     Cloud y generamos un kit web real (proyecto "Barcel Website" en
+     fonts.adobe.com, ver <link> en layout.tsx) con Veneer y Acumin Pro
+     licenciadas de verdad — ya NO son sustitutos. Los nombres de familia
+     que da Adobe son "veneer" y "acumin-pro"; se dejan Anton/Raleway como
+     fallback por si el kit tarda en cargar o falla la red, no como
+     sustituto permanente. TAKIS® Font (nombres de sabor) sigue sin
+     equivalente real — se mantiene Permanent Marker como sustituto. */
+  --font-takis-display: "veneer", "Anton", ui-sans-serif, system-ui, sans-serif;
+  --font-takis-body: "acumin-pro", "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-takis-mark: "Permanent Marker", ui-sans-serif, system-ui, sans-serif; /* sustituto de TAKIS® Font — sin licencia real disponible */
+
+  /* Ronda 97: "Introhead" para el título del contenedor del hero de Chip's
+     (h1 "Antojo picosito"). A diferencia de Teko/Veneer/Acumin Pro (CDN de
+     Google Fonts / kit de Adobe Typekit), esta fuente NO está disponible
+     en ningún servicio — el cliente compartió el archivo .otf directo
+     (nombre interno real: "Intro Head H Base"), así que se autohospeda
+     igual que cualquier asset propio: conversión a .woff2 (56KB, sin
+     dependencias de red externas) en public/fonts/, cargada vía @font-face
+     aquí abajo. Solo se usa en el título del hero de Chip's — el resto del
+     sitio no la toca. */
+  --font-introhead: "IntroHeadH", ui-sans-serif, system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "IntroHeadH";
+  src: url("/fonts/IntroHeadH-Base.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #0f0f0f;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-[1280px] px-5 md:px-10;
+}
+
+.diagonal-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.diagonal-clip-reverse {
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+}
