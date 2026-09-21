@@ -694,39 +694,11 @@ export const brands: Brand[] = [
     ],
   },
   {
-    slug: "big-mix",
-    name: "Big Mix",
-    tagline: "Mezcla, la fiesta y compartir",
-    description:
-      "Big Mix es la botana ideal para los que quieren todo en un solo snack. Disfruta sabores como Queso, Fuego e Inglesa limón, en una mezcla crujiente, deliciosa y surtida para compartir o disfrutar en cualquier momento. Elige Big Mix y piensa en Big.",
-    bg: "bg-bigmix-blue",
-    logoText: "text-bigmix-yellow",
-    // Ronda 35: bigmix-blue base solo da 4.00:1 sobre blanco (no pasa
-    // AA) — se usa bigmix-blue-700 (5.09:1) para textOnBg.
-    textOnBg: "text-bigmix-blue-700",
-    hoverBg: "hover:bg-bigmix-blue",
-    hoverText: "hover:text-black", // 5.26:1 sobre bigmix-blue — AA
-    groupHoverText: "group-hover:text-black",
-    // Ronda 36: mismo criterio que Chip's/Runners — el H1 es texto grande
-    // (WCAG 3:1), así que usa el amarillo de marca (ya usado en logoText)
-    // en vez de negro plano: 3.18:1 sobre bigmix-blue — AA-grande.
-    heroText: "text-bigmix-yellow",
-    lightHero: false,
-    // Ronda 39: mismo criterio — amarillo de marca en vez de negro:
-    // 3.18:1 contra bigmix-blue, ícono negro da 16.74:1 contra la caja.
-    socialBg: "bg-bigmix-yellow",
-    socialIcon: "text-black",
-    imageFirst: false,
-    logo: "/logos/big-mix.png",
-    logoHover: "/logos/big-mix-hover.png",
-    heroImage: "/products/big-mix/hero-queso.png",
-    flavors: [
-      { name: "Queso", image: "/products/big-mix/flavors/queso.png" },
-      { name: "Fuego", image: "/products/big-mix/flavors/fuego.png" },
-      { name: "Inglesa Limón", image: "/products/big-mix/flavors/inglesa-limon.png" },
-    ],
-  },
-  {
+    // Ronda 168: el cliente pidió que Hot Nuts quede dentro de las
+    // primeras 4 marcas del grid de Home (FamilyGrid.tsx colapsa a las
+    // primeras DEFAULT_VISIBLE_MOBILE=4 en mobile/tablet, detrás del CTA
+    // "Ver todas las marcas") — se intercambia de posición con Big Mix,
+    // que pasa al puesto 5. Chip's/Takis/Runners no cambian.
     slug: "hot-nuts",
     name: "Hot Nuts",
     tagline: "Picante que engancha",
@@ -766,6 +738,39 @@ export const brands: Brand[] = [
       { name: "Original", image: "/products/hot-nuts/flavors/original.png" },
       { name: "Fuego", image: "/products/hot-nuts/flavors/fuego.png" },
       { name: "Enigma", image: "/products/hot-nuts/flavors/enigma.png" },
+    ],
+  },
+  {
+    slug: "big-mix",
+    name: "Big Mix",
+    tagline: "Mezcla, la fiesta y compartir",
+    description:
+      "Big Mix es la botana ideal para los que quieren todo en un solo snack. Disfruta sabores como Queso, Fuego e Inglesa limón, en una mezcla crujiente, deliciosa y surtida para compartir o disfrutar en cualquier momento. Elige Big Mix y piensa en Big.",
+    bg: "bg-bigmix-blue",
+    logoText: "text-bigmix-yellow",
+    // Ronda 35: bigmix-blue base solo da 4.00:1 sobre blanco (no pasa
+    // AA) — se usa bigmix-blue-700 (5.09:1) para textOnBg.
+    textOnBg: "text-bigmix-blue-700",
+    hoverBg: "hover:bg-bigmix-blue",
+    hoverText: "hover:text-black", // 5.26:1 sobre bigmix-blue — AA
+    groupHoverText: "group-hover:text-black",
+    // Ronda 36: mismo criterio que Chip's/Runners — el H1 es texto grande
+    // (WCAG 3:1), así que usa el amarillo de marca (ya usado en logoText)
+    // en vez de negro plano: 3.18:1 sobre bigmix-blue — AA-grande.
+    heroText: "text-bigmix-yellow",
+    lightHero: false,
+    // Ronda 39: mismo criterio — amarillo de marca en vez de negro:
+    // 3.18:1 contra bigmix-blue, ícono negro da 16.74:1 contra la caja.
+    socialBg: "bg-bigmix-yellow",
+    socialIcon: "text-black",
+    imageFirst: false,
+    logo: "/logos/big-mix.png",
+    logoHover: "/logos/big-mix-hover.png",
+    heroImage: "/products/big-mix/hero-queso.png",
+    flavors: [
+      { name: "Queso", image: "/products/big-mix/flavors/queso.png" },
+      { name: "Fuego", image: "/products/big-mix/flavors/fuego.png" },
+      { name: "Inglesa Limón", image: "/products/big-mix/flavors/inglesa-limon.png" },
     ],
   },
   {
